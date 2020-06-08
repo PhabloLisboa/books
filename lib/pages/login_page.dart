@@ -1,5 +1,5 @@
 import 'package:books/models/User.dart';
-import 'package:books/models/login_model.dart';
+import 'package:books/models/Login.dart';
 import 'package:books/pages/home.dart';
 import 'package:books/utils/nav.dart';
 import 'package:books/widgets/alert.dart';
@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
 
-  final loginField = TextEditingController(text: "phablo");
+  final loginField = TextEditingController(text: "Phablo");
   final passField = TextEditingController(text: "123456");
   final formKey = GlobalKey<FormState>();
   bool _loading;
