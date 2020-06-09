@@ -69,4 +69,16 @@ class ListReview {
 
     return reviwesList;
   }
+
+  static Future<List<ListReview>> getAllWeekly() async {
+    final all = await ListReview.getAll();
+
+    return all.where((item) => item.updated == 'WEEKLY').toList();
+  }
+
+  static Future<List<ListReview>> getAllMonthly() async {
+    final all = await ListReview.getAll();
+
+    return all.where((item) => item.updated == 'MONTHLY').toList();
+  }
 }

@@ -83,8 +83,8 @@ class _LoginPageState extends State<LoginPage>
 
     if (loginResponse.ok) {
       User usuario = loginResponse.result;
-
-      push(context, Home(usuario), replace: true);
+      usuario.save();
+      push(context, Home(), replace: true);
     } else {
       alert(context, loginResponse.msg);
     }
